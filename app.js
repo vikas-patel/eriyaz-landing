@@ -1,5 +1,6 @@
 var express = require("express");
 var app = express();
+var port = process.env.PORT || 3000;
 var router = express.Router();
 var path = require('path');
 
@@ -23,7 +24,11 @@ router.get("/contact",function(req,res){
 });
 
 app.use("/",router);
-*/
+
 app.listen(3000,function(){
   console.log("Live at Port 3000");
+});
+*/
+var server = app.listen(port, function() {
+	console.log('App listening at http://%s:%s', server.address().address, server.address().port);
 });
