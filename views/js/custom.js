@@ -25,6 +25,7 @@ $('.navbar-collapse ul li a').click(function() {
 
 /* carousel */
 $(document).ready(function() {
+/*
 $("#screenshots").owlCarousel({
 	items: 4,
 	itemsCustom : [
@@ -34,6 +35,7 @@ $("#screenshots").owlCarousel({
 		[992, 4]
 		],
     });
+	
 $("#owl-testi").owlCarousel
 ({
 	navigation : false, // Show next and prev buttons
@@ -41,12 +43,13 @@ $("#owl-testi").owlCarousel
 	autoHeight : true,
 	singleItem:true
 });
+*/
 });
 
 
 /* sticky navigation */
   $(document).ready(function(){
-    $("#menu").sticky({topSpacing:0});
+    //$("#menu").sticky({topSpacing:0});
   });
 
 jQuery(document).ready(function($) {  
