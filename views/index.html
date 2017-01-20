@@ -52,6 +52,24 @@
 			.nav>li {
 				display: inline-block;
 			}
+		
+			.scroll-header {
+				height:0px;
+				width:100%;
+				position:relative;
+			}
+			
+			.scroll {
+				position:absolute;
+				z-index:1;
+				right:0%;
+				top:-5em;
+				color:#fff;
+			}
+			
+			.text-nowrap {
+				white-space: nowrap;
+			}
 		</style>
         <!-- Google Fonts -->
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic" />
@@ -85,13 +103,7 @@
 
                             <div class="video-header">
                                 <div class="video-embed wow fadeIn" data-wow-duration="1s">
-
-                                    <!-- video embed from YOUTUBE -->
                                     <iframe width="560" height="315" src="https://www.youtube.com/embed/JJkmjx8L_h8?rel=0" frameborder="0" allowfullscreen></iframe>
-
-                                    <!-- video embed from VIMEO -->
-                                    <!-- <iframe src="//player.vimeo.com/video/103435603?title=0&amp;byline=0&amp;portrait=0&amp;color=8aba56" width="500" height="281" frameborder="0" allowfullscreen></iframe> -->
-
                                 </div>
                             </div>						
 							
@@ -101,23 +113,25 @@
 
                         </div> 
                     </div>
+					<div class="scroll-header">
+						<span class="scroll text-nowrap text-center">scroll for more...<br><i class="fa fa-long-arrow-down"></i></span>
+					</div>
                 </div> 
             </div> 
         </div>
-		
         <!-- /.intro section -->
         <div id="intro">
             <div class="container">
                 <div class="row">
-
                     <!-- /.intro image -->
-                    <div class="col-md-6 intro-pic wow slideInLeft">
-						<iframe width="560" height="310" src="https://www.youtube.com/embed/4P_ZKZ9g4Yo?rel=0" frameborder="1" allowfullscreen></iframe>
-                        <!--img src="images/ipad.jpg" alt="ipad" class="img-responsive"-->
+                    <div class="col-md-8  intro-pic wow slideInLeft">
+						<div class="video-embed">
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/4P_ZKZ9g4Yo?rel=0" frameborder="1" allowfullscreen></iframe>
+                        </div>
                     </div>	
 
                     <!-- /.intro content -->
-                    <div class="col-md-6 wow slideInRight">
+                    <div class="col-md-4 wow slideInRight">
                         <h2>How Singing Works</h2>
                         <p>Ever wondered what is the secret sauce behind sounding magical? Well here it is .. REVEALED!</p>
 
@@ -136,7 +150,7 @@
                 <div class="row">
 
                     <!-- /.feature content -->
-                    <div class="col-md-6 wow fadeInLeft">
+                    <div class="col-md-4 wow fadeInLeft text-center">
                         <h2>Demo</h2>
                         <p>So we'll not hold u any longer. Here is a trailer for the epic experience you are about to enter <i class="icon icon-grin"></i></p>
 
@@ -145,9 +159,10 @@
                     </div>
 
                     <!-- /.feature image -->
-                    <div class="col-md-6 feature-2-pic wow fadeInRight">
-						<iframe width="560" height="310" src="https://www.youtube.com/embed/ASrmVW7RNSU?rel=0" frameborder="0" allowfullscreen></iframe>
-                        <!--img src="images/macbook.jpg" alt="macbook" class="img-responsive"-->
+                    <div class="col-md-8 feature-2-pic wow fadeInRight">
+						<div class="video-embed">
+							<iframe width="560" height="310" src="https://www.youtube.com/embed/ASrmVW7RNSU?rel=0" frameborder="0" allowfullscreen></iframe>
+                        </div>
                     </div>				  
                 </div>			  
             </div>
@@ -222,7 +237,8 @@
         <script src="js/wow.min.js"></script>
         <script src="js/owl.carousel.min.js"></script>
         <script>
-                                    new WOW().init();
+				new WOW().init();
+				
         </script>
     </body>
 </html>

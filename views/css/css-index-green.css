@@ -157,7 +157,7 @@ a:hover {
 	height: 37px
 }
 .logo {
-	margin: 100px 0 40px 0;
+	margin: 30px 0 30px 0;
 }
 .logo img{
 	width: 150px; 
@@ -375,7 +375,7 @@ a:hover {
 	color: #333;  
 }
 #package {
-	padding-top: 100px;
+	padding-top: 80px;
 }
 .title-line {
     width: 100px;
@@ -387,12 +387,14 @@ a:hover {
 	border: solid 1px #d1d1d1;
 }
 .package-option {
-	padding: 50px 0 100px;
+	padding: 50px 0 20px;
 }
 .package-option ul {
 	padding: 0;
 }
-.price-heading h3 {
+.
+
+price-heading h3 {
 	margin-top: 0;
 }
 .price-heading i {
@@ -498,7 +500,7 @@ a:hover {
 }
 .video-embed {
 	position: relative;
-	padding-top: 56.25%; 
+	padding-top: 56.25%;
 	height: 0;
 	background-color: #000000;
 	-webkit-box-shadow: 0 5px 15px rgba(0,0,0,0.2);
@@ -520,7 +522,7 @@ a:hover {
 	font-weight: 300;
 }
 .download-cta {
-	padding: 50px 0 160px;
+	padding: 30px 0 60px;
 }
 #contact {
 	width: 100%;
@@ -775,6 +777,11 @@ and (orientation : portrait) {
 	.button-demo li {
 		padding-bottom: 50px;
 	}
+	
+	.img-responsive {
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
 /* iPads (landscape) ----------- */
@@ -783,7 +790,7 @@ and (min-width : 768px)
 and (max-width : 1024px) 
 and (orientation : landscape) {
 	.logo {
-		margin: 100px 0 30px 0;
+		margin: 30px 0 30px 0;
 	}
 	.landing h1{
 		margin: 60px 0 60px 0;
@@ -815,12 +822,17 @@ and (orientation : landscape) {
 	.video-header {
 		margin: 50px 0 30px;
 	}
+	
+	.img-responsive {
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
 /* smart-phone ----------- */
 @media (max-width: 767px) {
 	.logo {
-		margin: 40px 0 30px 0;
+		margin: 30px 0 30px 0;
 	}
 	.head-btn {
 		margin: 30px 0 80px;
@@ -861,10 +873,10 @@ and (orientation : landscape) {
 		margin-top: 50px;
 	}
 	#package {
-		padding-top: 80px;
+		padding-top: 60px;
 	}
 	.package-option {
-		padding: 50px 0 50px;
+		padding: 50px 0 20px;
 	}
 	.price-box {
 		margin-bottom: 30px;
@@ -880,6 +892,11 @@ and (orientation : landscape) {
 	}
 	#bottom-action {
 		text-align: center;
+	}
+	
+	.img-responsive {
+		margin-left: auto;
+		margin-right: auto;
 	}
 }	
 /* iPhone 6Plus (landscape) ----------- */
@@ -911,7 +928,7 @@ and (orientation : landscape) {
 		margin-top: 70px;
 	}
 	.download-cta {
-		padding: 50px 0 100px;
+		padding: 30px 0 50px;
 	}
 }
 
