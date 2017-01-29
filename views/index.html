@@ -13,14 +13,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 		
         <!-- CSS Files -->
+		<link href="css/icomoon.css" rel="stylesheet">
         <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
         <link href="css/font-awesome.min.css" rel="stylesheet">
-		<link href="css/icomoon.css" rel="stylesheet">
         <link href="fonts/icon-7-stroke/css/pe-icon-7-stroke.css" rel="stylesheet">
         <link href="css/animate.css" rel="stylesheet" media="screen">
         <link href="css/owl.theme.css" rel="stylesheet">
         <link href="css/owl.carousel.css" rel="stylesheet">
-
         <!-- Colors -->
         <link href="css/css-index-green.css" rel="stylesheet" media="screen">
         <!-- <link href="css/css-index-green.css" rel="stylesheet" media="screen"> -->
@@ -53,6 +52,15 @@
 			
 			#feature {
 				padding-bottom: 50px;
+			}
+			
+			.subscribe-form {
+				max-width: none;
+				margin: 0px;
+			}
+			
+			.subscribe-form .form-control {
+				background-color: #f6f6f6;
 			}
 		</style>
         <!-- Google Fonts -->
@@ -213,16 +221,104 @@
                 </div>
             </div>
         </div>
+		<div class="modal fade" tabindex="-1" role="dialog">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title highlight" id="modal-title">Receive FREE weekly tips</h4>
+			  </div>
+			  <div class="modal-body">
+				<p id="modal-body-text">Receive FREE weekly tips on improving your voice by subscribing to our mailing list.</p>
+				<div class="subscribe-form">
+					<form class="news-letter mailchimp" action="" role="form" id="subscribe-form">
+						<input class="form-control" type="email" id="email" name="email" placeholder="Your email...">
+						<button type="submit" id="modal-submit" class="subscribe-btn btn">SUBSCRIBE</button>
+					</form>
+				</div>	
+			  </div>
+			</div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
         <!-- /.javascript files -->
         <script src="js/jquery.js"></script>
+		<script src="js/jquery.validate.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/custom.js"></script>
         <script src="js/jquery.sticky.js"></script>
         <script src="js/wow.min.js"></script>
         <script src="js/owl.carousel.min.js"></script>
         <script>
-				new WOW().init();
-				
+			new WOW().init();
+			var navigate = false;
+			var subscribed = false;
+			var shown = false;
+			$(document).ready( function() {
+				$('#subscribe-form').validate({ // initialize the plugin
+		        rules: {
+		            email: {
+		                required: true,
+		                email: true
+		            }
+		        },
+		        messages: {
+                    email: "Please enter a valid email address"
+                },
+		       submitHandler: function (form) {
+					subscribed = true;
+					var dataJson = {'entry.287386341': $("input#email").val()};	  
+		            $.ajax({
+					    type: "POST",
+					    url: "/subscribe",
+					    data: dataJson,
+					    success: function(data) {
+					    	$('#subscribe-form').trigger("reset");
+							if (navigate) {
+								window.location.href = '/subscription.html';
+							} else {
+								$('.modal').modal('hide');
+							}
+					    	//ga('send', 'event', 'lead', 'register');
+					    },
+					    error: function() {
+					    	$('#message').html("Something wrong: Please contact +91 9623443789 or eriyazonline@gmail.com for registration.");
+					   }
+					  });
+		            return false; // for demo
+		        }
+		    });
+			});
+			
+			$('a[href$="subscription.html"]').click(function(e){
+				navigate = true;
+				if (!subscribed) {
+					$('#modal-body-text').hide();
+					$('#modal-title').text("Sign Up");
+					$('#modal-submit').text("SUBMIT");
+					$('.modal').modal();
+					return false;
+				} else {
+					return true;
+				}
+			});
+			/*
+			$('.modal').on('hidden.bs.modal', function () {
+				if (navigate) {
+					window.location.href = '/subscription.html';
+				}
+			});
+			*/
+			$(window).scroll(function() {
+			   if($(window).scrollTop() + $(window).height() == $(document).height()) {
+					if (!shown) {
+						$('#modal-body-text').show();
+						$('#modal-title').text("Receive FREE weekly tips");
+						$('#modal-submit').text("SUBSCRIBE");
+						$('.modal').modal();
+						shown = true;
+					}
+			   }
+			});
         </script>
     </body>
 </html>
