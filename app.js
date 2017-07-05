@@ -30,6 +30,25 @@ router.post("/subscribe",function(req,res){
 		}
 	);
 });
+
+router.post("/register",function(req, res){
+  console.log(req.body);
+  request.post(
+		// Google Form: Learn to Sing (Web)
+	    'https://docs.google.com/forms/d/1vr-vtuEDsbKB5H6mn-b6LAtTZe5PSEL3Mj2ZnrLeDMs/formResponse',
+	    {form:req.body},
+	    function (error, response, body) {
+	        if (!error && response.statusCode == 200) {
+	        	var json_resp = {"info":"Thank you for registering. We will contact you in two days time."};
+    			res.json(json_resp);
+	        } else {
+	        	var json_resp = {};
+	        	res.statusCode = 400;
+    			res.json(json_resp);
+	        }
+	    }
+	);
+});
 /*
 router.get("/contact",function(req,res){
   res.sendFile(path + "contact.html");
