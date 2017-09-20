@@ -54,6 +54,10 @@
 				padding-bottom: 50px;
 			}
 			
+			#register-form .error {
+				color:white;
+			}
+			
 			.subscribe-form {
 				max-width: none;
 				margin: 0px;
@@ -61,6 +65,16 @@
 			
 			.subscribe-form .form-control {
 				background-color: #f6f6f6;
+			}
+			
+			.signup-header h3 {
+			    padding: 30px 0 20px;
+			    color: white;
+			    font-weight: 400;
+			}
+
+			.signup-header {
+				padding-bottom: 30px;
 			}
 		</style>
         <!-- Google Fonts -->
@@ -79,34 +93,47 @@
         <div class="fullscreen landing parallax" style="background-image:url('images/bg2.jpg');" data-img-width="2000" data-img-height="1000" data-diff="100">
             <div class="overlay">
                 <div class="container">
-					<div class="navbar-header navbar-brand">
-						<a class="site-name" href="#top">eRiyaz</a>
-						<p style="font-size: 14px;">Learn to Sing 10x Faster</p>
-					</div>
-
-					<div id="navbar-scroll" class="navbar-collapse navbar-backyard navbar-right">
-						<ul class="nav navbar-nav">
-							<li><a href="https://app.eriyaz.com/">Get Started</a></li>
-						</ul>
+					<div class="row">
+						<div class="navbar-header navbar-brand">
+							<a class="site-name" href="#top">eRiyaz</a>
+							<p style="font-size: 14px;">Learn to Sing 10x Faster</p>
+						</div>
 					</div>
                     <div class="row">
-                        <div class="col-md-8 col-md-offset-2 text-center">
+                        <div class="col-md-8">
 
                             <div class="video-header">
                                 <div class="video-embed wow fadeIn" data-wow-duration="1s">
                                     <iframe width="560" height="315" src="https://www.youtube.com/embed/PSD-nOeSqk8?rel=0" frameborder="0" allowfullscreen></iframe>
                                 </div>
-                            </div>						
-							
-							<div class="download-cta wow fadeInLeft">
-                                <a id="start-welcome" href="https://app.eriyaz.com" class="btn-secondary">Start Now</a>
                             </div>
 
                         </div> 
+						<!-- /register -->
+							<div class="col-md-4 wow slideInRight">
+								<div class="signup-header video-header wow fadeInUp">
+									<h3 class="form-title text-center">Register for your FREE first class</h3>
+									<form class="form-header" action="" role="form" id="register-form">
+										<div class="form-group">
+											<input class="form-control input-lg" name="name" id="name" type="text" placeholder="Your name">
+										</div>
+										<div class="form-group">
+											<input class="form-control input-lg" name="email" id="email" type="email" placeholder="Email address">
+										</div>
+										<div class="form-group">
+											<input class="form-control input-lg" name="phone" id="phone" type="text" placeholder="Mobile number">
+										</div>
+										<div class="form-group last">
+											<input id="submit" type="submit" class="btn btn-warning btn-block btn-lg" value="Register">
+										</div>
+										<p id="message" class="message text-center"></p>
+									</form>
+								</div>
+							</div>
                     </div>
-					<div class="scroll-header">
+					<!--div class="scroll-header">
 						<span class="scroll text-nowrap text-center">scroll for more...<br><i class="fa fa-long-arrow-down"></i></span>
-					</div>
+					</div-->
                 </div> 
             </div> 
         </div>
@@ -117,7 +144,7 @@
                     <!-- /.intro image -->
                     <div class="col-md-8  intro-pic slideInLeft">
 						<div class="video-embed">
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/2gMBJsZn31E?rel=0" frameborder="0" allowfullscreen></iframe>
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/2gMBJsZn31E?rel=0" frameborder="0" allowfullscreen></iframe>
                         </div>
                     </div>	
 
@@ -125,9 +152,7 @@
                     <div class="col-md-4 wow slideInRight">
                         <h2>How Singing Works</h2>
                         <p>Ever wondered what is the secret sauce behind sounding magical? Well here it is .. REVEALED!</p>
-
-                        <div class="btn-section"><a id="start-singing" href="https://app.eriyaz.com" class="btn-default">Start Now</a></div>
-
+                        <div class="btn-section"><a id="start-singing" href="subscription.html" class="btn-default">Start Now</a></div>
                     </div>
                 </div>			  
             </div>
@@ -144,15 +169,13 @@
                     <div class="col-md-4 wow fadeInLeft text-center">
                         <h2>Demo</h2>
                         <p>So we'll not hold u any longer. Here is a trailer for the epic experience you are about to enter <i class="icon icon-grin"></i></p>
-
-                        <div class="btn-section"><a id="start-demo" href="https://app.eriyaz.com" class="btn-default">Start Now</a></div>
-
+                        <div class="btn-section"><a id="start-demo" href="subscription.html" class="btn-default">Start Now</a></div>
                     </div>
 
                     <!-- /.feature image -->
                     <div class="col-md-8 feature-2-pic wow fadeInRight">
 						<div class="video-embed">
-							<iframe width="560" height="310" src="https://www.youtube.com/embed/4C1aO7nWSjg?rel=0" frameborder="0" allowfullscreen></iframe>
+						<iframe width="560" height="310" src="https://www.youtube.com/embed/4C1aO7nWSjg?rel=0" frameborder="0" allowfullscreen></iframe>
                         </div>
                     </div>				  
                 </div>			  
@@ -169,26 +192,30 @@
                     <div class="title-line wow fadeInRight"></div>
                 </div>
 				<div class="row package-option text-center">
-                    <!-- /.feature content -->
-                    <div class="col-md-2 col-sm-offset-2 wow fadeInUp">
-						<img src="images/ashwin.jpg" alt="macbook" class="img-responsive">
+                    <!-- /.feature content col-sm-offset-2-->
+                    <div class="col-md-3  wow fadeInUp">
+						<img src="images/paarth.jpg" alt="macbook" class="img-responsive center-block">
+						<h5>Paarth Singh</h5>
+                        <p>Aspiring Playback Singer</p>
+                        <p>Rising youtuber with over 15k subs and 500k views</p>
+                    </div>
+                    <div class="col-md-3 wow fadeInUp">
+						<img src="images/nisha.jpg" alt="macbook" class="img-responsive center-block">
+						<h5>Nisha Jain</h5>
+                        <p>M.A. Music</p>
+                        <p>Radio Artist</p>
+                    </div>
+                    <div class="col-md-3 wow fadeInUp">
+						<img src="images/ashwin.jpg" alt="macbook" class="img-responsive center-block">
 						<h5>Ashwin Jain</h5>
                         <p>IIT Kanpur</p>
+                        <p>Product Development</p>
                     </div>
-					<div class="col-md-2 wow fadeInUp">
-						<img src="images/nisha.jpg" alt="macbook" class="img-responsive">
-						<h5>Nisha Jain</h5>
-                        <p>M.A. Music & Radio Artist</p>
-                    </div>
-					<div class="col-md-2 wow fadeInUp">
-						<img src="images/vikas.jpg" alt="macbook" class="img-responsive">
+					<div class="col-md-3 wow fadeInUp">
+						<img src="images/vikas.jpg" alt="macbook" class="img-responsive center-block">
 						<h5>Vikas Patel</h5>
                         <p>IIT Kharagpur</p>
-                    </div>
-					<div class="col-md-2 wow fadeInUp">
-						<img src="images/ankita.jpg" alt="macbook" class="img-responsive">
-						<h5>Ankita Singh</h5>
-                        <p>Xavier Institute of Management</p>
+                        <p>Product Development</p>
                     </div>
 				</div>
             </div>
@@ -225,16 +252,24 @@
 			<div class="modal-content">
 			  <div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<h4 class="modal-title highlight" id="modal-title">Receive FREE weekly tips</h4>
+				<h4 class="modal-title highlight" id="modal-title">Register for your FREE first class</h4>
 			  </div>
 			  <div class="modal-body">
-				<p id="modal-body-text">Receive FREE weekly tips on improving your voice by subscribing to our mailing list.</p>
-				<div class="subscribe-form">
-					<form class="news-letter mailchimp" action="" role="form" id="subscribe-form">
-						<input class="form-control" type="email" id="email" name="email" placeholder="Your email...">
-						<button type="submit" id="modal-submit" class="subscribe-btn btn">SUBSCRIBE</button>
+					<form class="form-header" action="" role="form" id="register-form2">
+						<div class="form-group">
+							<input class="form-control input-lg" name="name2" id="name2" type="text" placeholder="Your name">
+						</div>
+						<div class="form-group">
+							<input class="form-control input-lg" name="email2" id="email2" type="email" placeholder="Email address">
+						</div>
+						<div class="form-group">
+							<input class="form-control input-lg" name="phone2" id="phone2" type="text" placeholder="Mobile number">
+						</div>
+						<div class="form-group last">
+							<input id="submit2" type="submit" class="btn btn-warning btn-block btn-lg" value="Register">
+						</div>
+						<p id="message2" class="message text-center"></p>
 					</form>
-				</div>	
 			  </div>
 			</div><!-- /.modal-content -->
 		  </div><!-- /.modal-dialog -->
@@ -249,36 +284,47 @@
         <script src="js/owl.carousel.min.js"></script>
         <script>
 			new WOW().init();
-			/*
-			var navigate = false;
-			var subscribed = false;
 			var shown = false;
-			$(document).ready( function() {
-				$('#subscribe-form').validate({ // initialize the plugin
+			$('a[href$="subscription.html"]').click(function(e){
+				// scroll slowly
+				// $('body, html').animate({scrollTop:0}, 2000);
+				$('.modal').modal();
+				return false;
+			});
+			
+			$(document).ready(function () {
+			$('#register-form').validate({ // initialize the plugin
 		        rules: {
+		        	name: {
+		                required: true
+		            },
 		            email: {
 		                required: true,
 		                email: true
+		            },
+		            phone: {
+		                required: true,
+		                minlength: 10,
+		                maxlength: 10
 		            }
 		        },
 		        messages: {
-                    email: "Please enter a valid email address"
+                    name: "Please enter your name",
+                    email: "Please enter a valid email address",
+                    phone: "Please enter 10 digits number."
                 },
 		       submitHandler: function (form) {
-					subscribed = true;
-					var dataJson = {'entry.287386341': $("input#email").val()};	  
+					var dataJson = {'entry.1769033687': $("input#name").val(),
+                    	'entry.109852712': $("input#email").val(),
+                    	'entry.1154736723':$("input#phone").val()};	  
 		            $.ajax({
 					    type: "POST",
-					    url: "/subscribe",
+					    url: "/register",
 					    data: dataJson,
 					    success: function(data) {
-					    	$('#subscribe-form').trigger("reset");
-							if (navigate) {
-								window.location.href = '/subscription.html';
-							} else {
-								$('.modal').modal('hide');
-							}
-					    	//ga('send', 'event', 'lead', 'register');
+					    	$('#message').html(data.info);
+					    	$('#register-form').trigger("reset");
+					    	ga('send', 'event', 'lead', 'register');
 					    },
 					    error: function() {
 					    	$('#message').html("Something wrong: Please contact +91 9623443789 or eriyazonline@gmail.com for registration.");
@@ -287,39 +333,58 @@
 		            return false; // for demo
 		        }
 		    });
-			});
-			
-			$('a[href$="subscription.html"]').click(function(e){
-				navigate = true;
-				if (!subscribed) {
-					$('#modal-body-text').hide();
-					$('#modal-title').text("Sign Up");
-					$('#modal-submit').text("SUBMIT");
-					$('.modal').modal();
-					return false;
-				} else {
-					return true;
-				}
-			});
-			/*
-			$('.modal').on('hidden.bs.modal', function () {
-				if (navigate) {
-					window.location.href = '/subscription.html';
-				}
-			});
-			*
-			$(window).scroll(function() {
-			   if($(window).scrollTop() + $(window).height() == $(document).height()) {
+
+		    $('#register-form2').validate({ // initialize the plugin
+		        rules: {
+		        	name2: {
+		                required: true
+		            },
+		            email2: {
+		                required: true,
+		                email: true
+		            },
+		            phone2: {
+		                required: true,
+		                minlength: 10,
+		                maxlength: 10
+		            }
+		        },
+		        messages: {
+                    name2: "Please enter your name",
+                    email2: "Please enter a valid email address",
+                    phone2: "Please enter 10 digits number."
+                },
+		       submitHandler: function (form) {
+		       		var dataJson = {'entry.1769033687': $("input#name2").val(),
+                    	'entry.109852712': $("input#email2").val(),
+                    	'entry.1154736723':$("input#phone2").val()};	  
+		            $.ajax({
+					    type: "POST",
+					    url: "/register",
+					    data: dataJson,
+					    success: function(data) {
+					    	$('#message2').html(data.info);
+					    	$('#register-form2').trigger("reset");
+					    	ga('send', 'event', 'lead', 'register');
+					    },
+					    error: function() {
+					    	$('#message2').html("Something wrong: Please contact +91 9623443789 or eriyazonline@gmail.com for registration.");
+					   }
+					  });
+		            return false; // for demo
+		        }
+		    });
+		});
+
+		$(window).scroll(function() {
+			   if($(window).scrollTop() + $(window).height() > $(document).height()*9/10) {
 					if (!shown) {
-						$('#modal-body-text').show();
-						$('#modal-title').text("Receive FREE weekly tips");
-						$('#modal-submit').text("SUBSCRIBE");
+						// $('#modal-body-text').show();
 						$('.modal').modal();
 						shown = true;
 					}
 			   }
 			});
-			*/
         </script>
     </body>
 </html>
