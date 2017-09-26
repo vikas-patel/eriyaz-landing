@@ -6,7 +6,9 @@
   },
   "dependencies": {
     "body-parser": "^1.16.0",
+    "ejs": "^2.5.7",
     "express": "latest",
-    "request": "^2.79.0"
+    "request": "^2.79.0",
+    "ejs": "@2.5.7"
   }
 }

@@ -6,6 +6,8 @@ var path = require('path');
 var request = require('request');
 var bodyParser = require('body-parser');
 
+// set the view engine to ejs
+app.set('view engine', 'ejs');
 
 app.use(express.static(path.join(__dirname, 'views')))
 app.use(bodyParser.json());
@@ -54,6 +56,16 @@ router.get("/contact",function(req,res){
   res.sendFile(path + "contact.html");
 });
 */
+
+// about page 
+app.get('/video/:id', function(req, res) {
+    // res.render('subscription');
+    var video = req.params.id;
+    res.render('video', {
+        video: video
+    });
+});
+
 app.use("/",router);
 
 var server = app.listen(port, function() {
