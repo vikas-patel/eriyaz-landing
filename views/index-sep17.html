@@ -13,15 +13,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 		
         <!-- CSS Files -->
-		<link href="/css/icomoon.css" rel="stylesheet">
-        <link href="/css/bootstrap.min.css" rel="stylesheet" media="screen">
-        <link href="/css/font-awesome.min.css" rel="stylesheet">
-        <link href="/fonts/icon-7-stroke/css/pe-icon-7-stroke.css" rel="stylesheet">
-        <link href="/css/animate.css" rel="stylesheet" media="screen">
-        <link href="/css/owl.theme.css" rel="stylesheet">
-        <link href="/css/owl.carousel.css" rel="stylesheet">
+		<link href="css/icomoon.css" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="fonts/icon-7-stroke/css/pe-icon-7-stroke.css" rel="stylesheet">
+        <link href="css/animate.css" rel="stylesheet" media="screen">
+        <link href="css/owl.theme.css" rel="stylesheet">
+        <link href="css/owl.carousel.css" rel="stylesheet">
         <!-- Colors -->
-        <link href="/css/css-index-green.css" rel="stylesheet" media="screen">
+        <link href="css/css-index-green.css" rel="stylesheet" media="screen">
         <!-- <link href="css/css-index-green.css" rel="stylesheet" media="screen"> -->
         <!-- <link href="css/css-index-purple.css" rel="stylesheet" media="screen"> -->
         <!-- <link href="css/css-index-red.css" rel="stylesheet" media="screen"> -->
@@ -90,7 +90,7 @@
         <div id="preloader"></div>
         <div id="top"></div>
         <!-- /.parallax full screen background image -->
-        <div class="fullscreen landing parallax" style="background-image:url('/images/bg2.jpg');" data-img-width="2000" data-img-height="1000" data-diff="100">
+        <div class="fullscreen landing parallax" style="background-image:url('images/bg2.jpg');" data-img-width="2000" data-img-height="1000" data-diff="100">
             <div class="overlay">
                 <div class="container">
 					<div class="row">
@@ -104,7 +104,7 @@
 
                             <div class="video-header">
                                 <div class="video-embed wow fadeIn" data-wow-duration="1s">
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= videoUrl %>?rel=0" frameborder="0" allowfullscreen></iframe>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/PSD-nOeSqk8?rel=0" frameborder="0" allowfullscreen></iframe>
                                 </div>
                             </div>
 
@@ -141,15 +141,112 @@
         <div id="intro">
             <div class="container">
                 <div class="row">
+                    <!-- /.intro image -->
+                    <div class="col-md-8  intro-pic slideInLeft">
+						<div class="video-embed">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/2gMBJsZn31E?rel=0" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>	
+
                     <!-- /.intro content -->
-                    <div class="col-md-8 wow slideInRight">
-                    	<%- include(desc) %>
+                    <div class="col-md-4 wow slideInRight">
+                        <h2>How Singing Works</h2>
+                        <p>Ever wondered what is the secret sauce behind sounding magical? Well here it is .. REVEALED!</p>
+                        <div class="btn-section"><a id="start-singing" href="subscription.html" class="btn-default">Start Now</a></div>
                     </div>
                 </div>			  
             </div>
         </div>
 
+        <!-- /.feature section -->
 
+        <!-- /.feature 2 section -->
+        <div id="feature">
+            <div class="container">
+                <div class="row">
+
+                    <!-- /.feature content -->
+                    <div class="col-md-4 wow fadeInLeft text-center">
+                        <h2>Demo</h2>
+                        <p>So we'll not hold u any longer. Here is a trailer for the epic experience you are about to enter <i class="icon icon-grin"></i></p>
+                        <div class="btn-section"><a id="start-demo" href="subscription.html" class="btn-default">Start Now</a></div>
+                    </div>
+
+                    <!-- /.feature image -->
+                    <div class="col-md-8 feature-2-pic wow fadeInRight">
+						<div class="video-embed">
+						<iframe width="560" height="310" src="https://www.youtube.com/embed/4C1aO7nWSjg?rel=0" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>				  
+                </div>			  
+            </div>
+        </div>
+
+
+        <!-- /.download section -->
+        <!-- /.testimonial section -->
+      <div id="testi">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="wow fadeInLeft">TEAM</h2>
+                    <div class="title-line wow fadeInRight"></div>
+                </div>
+				<div class="row package-option text-center">
+                    <!-- /.feature content col-sm-offset-2-->
+                    <div class="col-md-3  wow fadeInUp">
+						<img src="images/paarth.jpg" alt="macbook" class="img-responsive center-block">
+						<h5>Paarth Singh</h5>
+                        <p>Aspiring Playback Singer</p>
+                        <p>Rising youtuber with over 15k subs and 500k views</p>
+                    </div>
+                    <div class="col-md-3 wow fadeInUp">
+						<img src="images/nisha.jpg" alt="macbook" class="img-responsive center-block">
+						<h5>Nisha Jain</h5>
+                        <p>M.A. Music</p>
+                        <p>Radio Artist</p>
+                    </div>
+                    <div class="col-md-3 wow fadeInUp">
+						<img src="images/ashwin.jpg" alt="macbook" class="img-responsive center-block">
+						<h5>Ashwin Jain</h5>
+                        <p>IIT Kanpur</p>
+                        <p>Product Development</p>
+                    </div>
+					<div class="col-md-3 wow fadeInUp">
+						<img src="images/vikas.jpg" alt="macbook" class="img-responsive center-block">
+						<h5>Vikas Patel</h5>
+                        <p>IIT Kharagpur</p>
+                        <p>Product Development</p>
+                    </div>
+				</div>
+            </div>
+        </div>
+
+        <!-- /.contact section -->
+        <div id="contact">
+            <div class="contact fullscreen parallax" style="background-image:url('images/bg2.jpg');" data-img-width="2000" data-img-height="800" data-diff="100">
+                <div class="overlay">
+                    <div class="container">
+                        <div class="row contact-row">
+
+                            <!-- /.address and contact -->
+                            <div class="col-sm-5 contact-left wow fadeInUp">
+                                <h2><span class="highlight">Get</span> in touch</h2>
+                                <ul class="ul-address">
+                                    <li><i class="pe-7s-map-marker"></i>B-35, 1st Floor, New Rajender Nagar</br>
+                                        New Delhi, India
+                                    </li>
+                                    <li><i class="pe-7s-phone"></i>+91 9623443789
+                                    </li>
+                                    <li><i class="pe-7s-mail"></i><a href="mailto:eriyazonline@gmail.com">eriyazonline@gmail.com </a></li>
+                                    <!--li><i class="pe-7s-look"></i><a href="#">www.yoursite.com</a></li-->
+                                </ul>	
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 		<div class="modal fade" tabindex="-1" role="dialog">
 		  <div class="modal-dialog" role="document">
 			<div class="modal-content">
@@ -178,13 +275,13 @@
 		  </div><!-- /.modal-dialog -->
 		</div><!-- /.modal -->
         <!-- /.javascript files -->
-        <script src="/js/jquery.js"></script>
-		<script src="/js/jquery.validate.min.js"></script>
-        <script src="/js/bootstrap.min.js"></script>
-        <script src="/js/custom.js"></script>
-        <script src="/js/jquery.sticky.js"></script>
-        <script src="/js/wow.min.js"></script>
-        <script src="/js/owl.carousel.min.js"></script>
+        <script src="js/jquery.js"></script>
+		<script src="js/jquery.validate.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/custom.js"></script>
+        <script src="js/jquery.sticky.js"></script>
+        <script src="js/wow.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
         <script>
 			new WOW().init();
 			var shown = false;

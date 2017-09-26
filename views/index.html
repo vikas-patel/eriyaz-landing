@@ -76,6 +76,120 @@
 			.signup-header {
 				padding-bottom: 30px;
 			}
+
+			/*  VIDEOS PLAYLIST 
+ 		############################### */
+		.vid-list-container {
+			width: 92%;
+			overflow: hidden;
+			margin-top: 20px;
+			margin-left:4%;
+			padding-bottom: 20px;
+		}
+
+		.vid-list {
+			width: 1800px;
+			position: relative;
+			top:0;
+			left: 0;
+		}
+
+		.vid-item {
+			display: block;
+			width: 180px;
+			height: 180px;
+			float: left;
+			margin: 0;
+			padding: 10px;
+		}
+
+		.thumb {
+			/*position: relative;*/
+			overflow:hidden;
+			height: 100px;
+		}
+
+		.thumb img {
+			width: 100%;
+			position: relative;
+			top: -13px;
+		}
+
+		.vid-item .desc {
+			color: #21A1D2;
+			font-size: 15px;
+			margin-top:5px;
+		}
+
+		.vid-item:hover {
+			background: #eee;
+			cursor: pointer;
+		}
+
+		.arrows {
+			position:relative;
+			width: 100%;
+		}
+
+		.arrow-left {
+			color: #fff;
+			position: absolute;
+			background: #777;
+			padding: 15px;
+			left: -25px;
+			top: -130px;
+			z-index: 99;
+			cursor: pointer;
+		}
+
+		.arrow-right {
+			color: #fff;
+			position: absolute;
+			background: #777;
+			padding: 15px;
+			right: -25px;
+			top: -130px;
+			z-index:100;
+			cursor: pointer;
+		}
+
+		.arrow-left:hover {
+			background: #CC181E;
+		}
+
+		.arrow-right:hover {
+			background: #CC181E;
+		}
+
+
+		@media (max-width: 624px) {
+			body {
+				margin: 15px;
+			}
+			.caption {
+				margin-top: 40px;
+			}
+			.vid-list-container {
+				padding-bottom: 20px;
+			}
+
+			/* reposition left/right arrows */
+			.arrows {
+				position:relative;
+				margin: 0 auto;
+				width:96px;
+			}
+			.arrow-left {
+				left: 0;
+				top: -17px;
+			}
+
+			.arrow-right {
+				right: 0;
+				top: -17px;
+			}
+		}
+
 		</style>
         <!-- Google Fonts -->
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic" />
@@ -104,7 +218,7 @@
 
                             <div class="video-header">
                                 <div class="video-embed wow fadeIn" data-wow-duration="1s">
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/PSD-nOeSqk8?rel=0" frameborder="0" allowfullscreen></iframe>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/4C1aO7nWSjg?rel=0" frameborder="0" allowfullscreen></iframe>
                                 </div>
                             </div>
 
@@ -137,47 +251,78 @@
                 </div> 
             </div> 
         </div>
-        <!-- /.intro section -->
-        <div id="intro">
-            <div class="container">
-                <div class="row">
-                    <!-- /.intro image -->
-                    <div class="col-md-8  intro-pic slideInLeft">
-						<div class="video-embed">
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/2gMBJsZn31E?rel=0" frameborder="0" allowfullscreen></iframe>
-                        </div>
-                    </div>	
-
-                    <!-- /.intro content -->
-                    <div class="col-md-4 wow slideInRight">
-                        <h2>How Singing Works</h2>
-                        <p>Ever wondered what is the secret sauce behind sounding magical? Well here it is .. REVEALED!</p>
-                        <div class="btn-section"><a id="start-singing" href="subscription.html" class="btn-default">Start Now</a></div>
-                    </div>
-                </div>			  
-            </div>
-        </div>
-
-        <!-- /.feature section -->
 
         <!-- /.feature 2 section -->
         <div id="feature">
             <div class="container">
+             <div class="text-center">
+                    <h2 class="wow fadeInLeft">Levels of Singing</h2>
+                    <div class="title-line wow fadeInRight"></div>
+                </div>
                 <div class="row">
 
-                    <!-- /.feature content -->
-                    <div class="col-md-4 wow fadeInLeft text-center">
-                        <h2>Demo</h2>
-                        <p>So we'll not hold u any longer. Here is a trailer for the epic experience you are about to enter <i class="icon icon-grin"></i></p>
-                        <div class="btn-section"><a id="start-demo" href="subscription.html" class="btn-default">Start Now</a></div>
-                    </div>
+                <!-- THE PLAYLIST -->
+					<div class="vid-list-container">
+				        <div class="vid-list">
+				         	
+			 	            <div class="vid-item" onClick="location.href='/video/1'">
+			 	              <div class="thumb"><img src="http://img.youtube.com/vi/mEGOrp_fOqM/0.jpg"></div>
+			 	              <div class="desc">Singing Classes #1 | How to Start Singing for Beginners | Hindi | 10 Basic Levels</div>
+			 	            </div>
 
-                    <!-- /.feature image -->
-                    <div class="col-md-8 feature-2-pic wow fadeInRight">
-						<div class="video-embed">
-						<iframe width="560" height="310" src="https://www.youtube.com/embed/4C1aO7nWSjg?rel=0" frameborder="0" allowfullscreen></iframe>
-                        </div>
-                    </div>				  
+			 	            <div class="vid-item" onClick="location.href='/video/2'">
+			 	              <div class="thumb"><img src="http://img.youtube.com/vi/rbo4JtOrkkA/0.jpg"></div>
+			 	              <div class="desc">Singing Classes #2 What Are Musical Notes?</div>
+			 	            </div>
+
+			 	            <div class="vid-item" onClick="location.href='/video/3'">
+			 	              <div class="thumb"><img src="http://img.youtube.com/vi/DKhdWJbShno/0.jpg"></div>
+			 	              <div class="desc">Singing Classes #3 Introduction On Scales And Its Basic Types In Hindi</div>
+			 	            </div>
+
+			 	            <div class="vid-item" onClick="location.href='/video/4'">
+			 	              <div class="thumb"><img src="http://img.youtube.com/vi/gpNydmvKqgw/0.jpg"></div>
+			 	              <div class="desc">Singing Classes #4 How to Read/Write In Indian Classical Music In Hindi</div>
+			 	            </div>
+
+			 	            <div class="vid-item" onClick="location.href='/video/5'">
+			 	              <div class="thumb"><img src="http://img.youtube.com/vi/2fk6Oo4Voa4/0.jpg"></div>
+			 	              <div class="desc">Singing Classes #5 How To Sing In Scale Of The Song Easily | Level 4| Hindi</div>
+			 	            </div>
+
+			 	            <div class="vid-item" onClick="location.href='/video/6'">
+			 	              <div class="thumb"><img src="http://img.youtube.com/vi/JMplNDg8DKE/0.jpg"></div>
+			 	              <div class="desc">Singing Classes #6 How To Sing In Rhythm Throughout The Song Easily | Part 1 | Hindi</div>
+			 	            </div>
+
+			 	            <div class="vid-item" onClick="location.href='/video/7'">
+			 	              <div class="thumb"><img src="http://img.youtube.com/vi/fwPfWUuKpFg/0.jpg"></div>
+			 	              <div class="desc">Singing Classes #7 How To Sing Melodiously Through Out The Song ? | Level 6 - Hindi</div>
+			 	            </div>
+
+			 	            <div class="vid-item" onClick="location.href='/video/8'">
+			 	              <div class="thumb"><img src="http://img.youtube.com/vi/C89XcxmQXlI/0.jpg"></div>
+			 	              <div class="desc">Singing Classes #8 How To Feel The Song As A Singer | Hindi</div>
+			 	            </div>
+
+			 	            <div class="vid-item" onClick="location.href='/video/9'">
+			 	              <div class="thumb"><img src="http://img.youtube.com/vi/_kvzLzzSnak/0.jpg"></div>
+			 	              <div class="desc">Singing Classes #9 How To Sing Any Harkat/Murki In a Song Easily |Part 1| Listening Skills</div>
+			 	            </div>
+
+			 	            <div class="vid-item" onClick="location.href='/video/10'">
+			 	              <div class="thumb"><img src="http://img.youtube.com/vi/EnoyvVWNXWw/0.jpg"></div>
+			 	              <div class="desc">Singing Classes #10 How to Sing Any Harkat/Murki In a Song Easily || Part 2</div>
+			 	            </div>
+			 	            
+				 	    </div>
+        			</div>
+
+			        <!-- LEFT AND RIGHT ARROWS -->
+			        <div class="arrows">
+			        	<div class="arrow-left"><i class="fa fa-chevron-left fa-lg"></i></div>
+			        	<div class="arrow-right"><i class="fa fa-chevron-right fa-lg"></i></div>
+			        </div>
                 </div>			  
             </div>
         </div>
@@ -293,6 +438,20 @@
 			});
 			
 			$(document).ready(function () {
+				// Left/Right Arrow
+				$(".arrow-right").bind("click", function (event) {
+		        event.preventDefault();
+		        $(".vid-list-container").stop().animate({
+		            scrollLeft: "+=336"
+		        }, 750);
+		    });
+		    $(".arrow-left").bind("click", function (event) {
+		        event.preventDefault();
+		        $(".vid-list-container").stop().animate({
+		            scrollLeft: "-=336"
+		        }, 750);
+		    });
+
 			$('#register-form').validate({ // initialize the plugin
 		        rules: {
 		        	name: {

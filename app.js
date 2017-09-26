@@ -5,6 +5,7 @@ var router = express.Router();
 var path = require('path');
 var request = require('request');
 var bodyParser = require('body-parser');
+var videoIds = require("./views/videoIds.json");
 
 // set the view engine to ejs
 app.set('view engine', 'ejs');
@@ -60,9 +61,10 @@ router.get("/contact",function(req,res){
 // about page 
 app.get('/video/:id', function(req, res) {
     // res.render('subscription');
-    var video = req.params.id;
+    var id = req.params.id;
     res.render('video', {
-        video: video
+        videoUrl: videoIds[id],
+        desc: "desc-"+id
     });
 });
 
